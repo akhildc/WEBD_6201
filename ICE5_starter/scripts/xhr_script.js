@@ -8,22 +8,37 @@ let url_todos = 'https://jsonplaceholder.typicode.com/todos';
 let url_users = 'https://jsonplaceholder.typicode.com/users';
 
 // instantiate the XMLHttpRequest object with the new keyword
-
+let xhr = new XMLHttpRequest();
 
 
 // create a callback function to fire when the onreadystatechange happens
-    // check that the state is done
-    // if (xhr.readyState === 4) {
+xhr.onreadystatechange = () => {
+     // check that the state is done
+     //if(xhr.readyState === XMLHttpRequest.DONE)
+    if (xhr.readyState === 4) {
             // turn into json
+            let jsonResponse = JSON.parse(xhr.responseText)
             // console log to see what we have
+            console.log(`The response: ${jsonResponse[0]['url']}`)
+            let photo_url_1 = jsonResponse[0]['url']
+            let photo_url_2 = jsonResponse[1]['url']
             // update the 1st image
+            $('#photo1').attr("src", photo_url_1)
+            
             // update the 1st figcaption
             // update the 2nd image
             // update the 2nd figcaption
             // send error message
+    }
 
+
+}
+   
 // use the .open() method to configure the object
+xhr.open("GET", url_photos)
 
 // add datatype to header
+// xhr.setRequestHeader("Content-Type", "application/json");
 
 // use the .send() method to send the request
+xhr.send()
