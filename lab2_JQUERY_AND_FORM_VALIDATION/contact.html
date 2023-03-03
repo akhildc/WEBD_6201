@@ -1,0 +1,72 @@
+<!-- Created By Akhil John Sunny
+Date 02 Feb 2023
+Student ID :100850105 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- Import bootstrap -->
+    <link rel ="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- Import font -->
+    <link rel ="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"/>
+</head>
+<body>
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="product.html">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item" id="contact-link">
+            <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="register.html">Register</a>
+      </li>
+       
+      </ul>
+      <form>
+        <div class="form-group col-md-6">
+          <label for="userName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="userName" required/>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required/>
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPhone">Phone</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="inputPhone"
+            placeholder="999-888-7777"
+            pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+            required
+          />
+        </div>
+        <div class="form-group col-md-6">
+          <label class="form-label" for="textAreaExample">Message</label>
+          <textarea class="form-control" id="textAreaInput" rows="4"></textarea>
+        <p></p>  
+        </div>
+        
+        <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <script src="./scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!-- Created By Akhil John Sunny
+Date 02 Feb 2023
+Student ID :100850105 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <!-- Import bootstrap -->
+    <link rel ="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- Import font -->
+    <link rel ="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"/>
+</head>
+<body>
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item" id="contact-link">
+            <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="register.html">Register</a>
+      </li>
+        
+    </ul>
+    <h1>Interesting Medias</h1>
+    <P>I would like to share with you some of the interesting series that I like watching</p>
+      <!-- from bootstrap website https://getbootstrap.com/docs/4.0/components/list-group/ -->
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">1.Breaking bad</h5>            
+          </div>
+          <p id="productText1" class="mb-1"></p>
+          <img src="./images/breaking_bad.jpg" alt="" width="300" height="350">
+                          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">2.Peaky Blinders</h5>
+            
+          </div>
+          <p id="productText2" class="mb-1"></p>
+          <img src="./images/peaky_blinders.jpg" alt="" width="300" height="350">
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">3.Sacred Games</h5>
+            
+          </div>
+          <p id="productText3" class="mb-1"></p>
+          <img src="./images/sacred_games.jpg" alt="" width="300" height="350">
+        </a>
+      </div>
+    <script src="./scripts/app.js"></script> 
+</body>
+</html>

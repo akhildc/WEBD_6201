@@ -1,0 +1,86 @@
+<!-- Created By Akhil John Sunny
+Date 02 Feb 2023
+Student ID :100850105 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- import jquery with CDN -->
+		<script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"
+  ></script>
+    <!-- Import bootstrap -->
+    <link rel ="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- Import font -->
+    <link rel ="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"/>
+   
+</head>
+
+<body>
+ 
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="product.html">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item" id="contact-link">
+            <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="register.html">Register</a>
+      </li>
+        
+      </ul>
+      <h1 id="welcome">Welcome</h1>
+    
+      <form>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="userNameInput" class="form-control" />
+          <label class="form-label" for="userNameInput">Email address</label>
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form2Example2" class="form-control" />
+          <label class="form-label" for="form2Example2">Password</label>
+        </div>   
+        
+      
+       
+      
+        <!-- Register buttons -->
+        <div class="text-center">
+             <!-- Submit button -->
+        <button type="button" id="sign-in-button" class="btn btn-primary btn-block mb-4">Sign in</button>
+          <p>Not a member? <a href="register.html">Register</a></p>
+          
+        </div>
+      </form>
+
+
+    <script src="./scripts/app.js"></script>  
+    <!-- import scripts as modules --> 
+    <script type ="module" src="./scripts/form.js"></script>  
+   
+</body>
+
+
+</html>
