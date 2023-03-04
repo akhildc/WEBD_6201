@@ -16,6 +16,7 @@ xhr.onreadystatechange = () => {
      // check that the state is done
      //if(xhr.readyState === XMLHttpRequest.DONE)
     if (xhr.readyState === 4) {
+        if(xhr.status === 200){
             // turn into json
             let jsonResponse = JSON.parse(xhr.responseText)
             // console log to see what we have
@@ -24,12 +25,19 @@ xhr.onreadystatechange = () => {
             let photo_url_2 = jsonResponse[1]['url']
             // update the 1st image
             $('#photo1').attr("src", photo_url_1)
-            
+
             // update the 1st figcaption
+            $("#photo1 ~ figcaption").text("This is the first image updated by AJAX call")
             // update the 2nd image
+            $('#photo2').attr("src", photo_url_2)
             // update the 2nd figcaption
+            $("#photo2 ~ figcaption").text("This is the second image updated by AJAX call")
             // send error message
     }
+    else{
+        alert(`Nope Didn,t work returned with status code ${xhr.status}`)
+    }
+}
 
 
 }
