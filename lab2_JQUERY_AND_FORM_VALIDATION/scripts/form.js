@@ -1,3 +1,6 @@
+// Created By Akhil John Sunny
+// Date 27 Feb 2023
+// Student ID :100850105
 // import everything from user.js as alias userClass
 import * as userClass from "./user.js"
 // Adds the user name to navbar when Login button is clicked
@@ -24,9 +27,9 @@ function createDivError(){
   let errorMessage = $("<div id='ErrorMessage'></div>")
   // set the initial CSS for the error message div
   errorMessage.css({
-    "background-color": "pink",
+    "background-color": "white",
     "color": "red",
-    "width": "100%",
+    "width": "50%",
 
   });
 
@@ -142,6 +145,7 @@ if ($("#btnRegSubmit")) {
 if ($("#btnRegReset")) {
   // Click function
   $("#btnRegReset").click(function (e) {
+    $('#ErrorMessage').hide()
     // Deconstruct the user object
     const new_user = new userClass.User('','','','','')
     // Display empty user class on console.
