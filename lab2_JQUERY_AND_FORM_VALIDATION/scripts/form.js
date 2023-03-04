@@ -46,41 +46,58 @@ if(regSubmitButton){
  */
 // Function to validate name
 function validateName(){
+  // Get the first name and last name and store it to a variable
   let firstNameInput = $('#inputFirst').val()
   let lastNameInput = $('#inputLast').val()
   //console.log("The name is "+ firstNameInput)
+  // Validate first name and last name
   if (firstNameInput.length < 2 || lastNameInput.length < 2){    
     $('#ErrorMessage').show()
     //console.log(" Here is the error")
+    // Retiurn error message to be displayed
     return "<p> The first name or last name is short </p>"
   }
   else {
+    // If no error return nothing
       return "";
   }
 }
-
+/**
+ * Function to validate email
+ * @returns Error message is returned
+ */
 function validateEmail(){
   let email = $('#inputEmail').val()
+  // Validate email input
   if(email.length < 8 || email.indexOf("@")< 1){
+    // Return error message to be displayed
     $('#ErrorMessage').show()
     return "<p> The email entered is not valid </p>"
   }
+  // If no error return nothing
   else{
     return "";
   }
 }
-
+/**
+ * Function to validate password
+ * @returns Error message is returned
+ */
 function validatePassword(){
+  // Get the input passwords
   let pass1 = $('#inputPassword').val()
   let pass2 =$('#inputPassword2').val()
+  // Validate password and return error message
   if (pass1 !== pass2){
     $('#ErrorMessage').show()
     return "<p> The passwords must be same</p>"
   }
+   // Validate password and return error message
   else if (pass1.length < 6){
     $('#ErrorMessage').show()
     return "<p> The password is too small</p>"
   }
+  // If no error return nothing
   else{
     return "";
   }
@@ -92,6 +109,8 @@ if ($("#btnRegSubmit")) {
   $("#btnRegSubmit").click(function (e) {
       // prevent the default submit action (stay on the page)
       e.preventDefault()
+      //Calls the functions to validate user inputs
+      //If there is any error add the message to the div element with id error message
       $('#ErrorMessage').html(validateName())
       $('#ErrorMessage').html($('#ErrorMessage').html() + validatePassword())
       $('#ErrorMessage').html($('#ErrorMessage').html() + validateEmail())
@@ -111,6 +130,7 @@ if ($("#btnRegSubmit")) {
           // get the password input
           $("#inputPassword").val()
       );
+      // Display user details on console
       console.log(`User Details: ${new_user.displayUser()}`)
       }
       else {
@@ -118,10 +138,13 @@ if ($("#btnRegSubmit")) {
       }
     })
 }
+// If the reset button is on the page
 if ($("#btnRegReset")) {
   // Click function
   $("#btnRegReset").click(function (e) {
+    // Deconstruct the user object
     const new_user = new userClass.User('','','','','')
+    // Display empty user class on console.
     console.log(`User Details: ${new_user.displayUser()}`)
   })
   
