@@ -29,11 +29,8 @@ $(btnFetch).click(()=> {
         $("#output").text(jsonRes['joke'])
 
 
-    })
-        
-        
-            
-           
+    })             
+          
 })
     
 
