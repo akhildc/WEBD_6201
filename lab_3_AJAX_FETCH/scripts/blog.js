@@ -13,19 +13,26 @@ url_fetch = 'https://jsonplaceholder.typicode.com/posts'
 
 //Header to Accept value set to 'application/json'
 let myFetchHeaders = {"Accept": "application/json"}
-
+// Function to create card element and blogs
 const makePosts = () => {
+    //Loop through to create 20 cards
     for (let j = 0; j < 20; j++){
         let id_no = j;
+        //Create card
         let card = $(`<div class="card blog"></div>`).attr("id", 'card-' +id_no).appendTo($('.blog-column'))
+        //Create card body
         let body = $('<div class ="card-body blog"></div>')
         .attr('id', 'card-body-' + id_no)
         .appendTo(card)
+        //Create title element
         let title = $('<h5 class ="card-title blog"></h5>').attr('id', "card-title-blog"+id_no)
         .appendTo(body)
+        //Create pic element
         let pic = $("<img>").attr('id', "img-"+ id_no).addClass('blog-pic').css('max-height', '100px')
         .appendTo(body)
+        //Create text element
         let text =$('<p class="card-text blog"></p>').attr('id', 'card-text-'+ id_no).appendTo(body)
+        // Element to display picture id
         let sub =$('<p class ="userId blog"></p>')
         .attr('id', 'sub-'+ id_no).appendTo(body)
 
@@ -53,9 +60,12 @@ const getPictures = ()=> {
         return res.json()
     })
     .then((data) => {
+        //Loop through to get 20 pictures
         for (let i = 0; i< 20; i++){
+            // Variable to store json response
             let picSrc = data ['hits'][i]['webformatURL']
             let altText = data ['hits'][i]['tags']
+            //Add the json response to image element
             $("#img-"+i).attr("src", picSrc).attr("alt", altText)
         }
 
