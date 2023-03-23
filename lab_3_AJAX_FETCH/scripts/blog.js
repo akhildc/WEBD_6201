@@ -92,12 +92,12 @@ const getblog = (i)=>{
          // console log the json
          console.log(jsonRes['body'])
          // Get the json response at specific index
-         const blog = jsonRes[i]
+         const blog = jsonRes['body']
         // set the output of title
-        $("#card-title-blog"+i).text(blog.title)
+        $("#card-title-blog"+i).text('title')
        
         // set the output of paragraph
-        $("#card-text-"+i).text(blog.body)
+        $("#card-text-"+i).text('body')
         
 
 
