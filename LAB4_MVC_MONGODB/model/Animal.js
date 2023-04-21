@@ -1,3 +1,5 @@
+// Created By: Akhil John Sunny
+// Date: April 20 2023
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema;
 // Schema for the database

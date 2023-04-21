@@ -1,0 +1,194 @@
+{{!-- Created By: Akhil John Sunny
+Date: April 20 2023 --}}
+
+{{!-- Form for input from user --}}
+<div class='row justify-content-center'>
+	<div class='col-md-8'>
+		<h2>Add an animal to Database</h2>
+		<div class='card'>
+			<div class='card-header'>Add Animal</div>
+			<div class='card-body'>
+
+				<form class='form-horizontal' method='post' action='/form'>
+
+					<div class='form-group'>
+						<label
+							for='zoo'
+							class='cols-sm-2 control-label'
+						>Home zoo</label>
+						<div class='cols-sm-10'>
+							<div class='input-group'>
+								<span class='input-group-addon'><i
+										class='fa fa-user fa'
+										aria-hidden='true'
+									></i></span>
+								<input
+									type='text'
+									class='form-control'
+									name='zoo'
+									id='zoo'
+									placeholder='Enter zoo'
+								/>
+							</div>
+						</div>
+					</div>
+					<div class='form-group'>
+						<label for='scientificName' class='cols-sm-2 control-label'>Scientific
+							Name</label>
+						<div class='cols-sm-10'>
+							<div class='input-group'>
+								<span class='input-group-addon'><i
+										class='fa fa-envelope fa'
+										aria-hidden='true'
+									></i></span>
+								<input
+									type='text'
+									class='form-control'
+									name='scientificName'
+									id='scientificName'
+									placeholder='Enter Scientific Name'
+								/>
+							</div>
+						</div>
+					</div>
+
+					<div class='form-group'>
+						<label
+							for='commonName'
+							class='cols-sm-2 control-label'
+						>Common Name</label>
+						<div class='cols-sm-10'>
+							<div class='input-group'>
+								<span class='input-group-addon'><i
+										class='fa fa-lock fa-lg'
+										aria-hidden='true'
+									></i></span>
+								<input
+									type='text'
+									class='form-control'
+									name='commonName'
+									id='commonName'
+									placeholder='Enter Common Name'
+								/>
+							</div>
+						</div>
+					</div>
+					<div class='form-group'>
+						<label
+							for='givenName'
+							class='cols-sm-2 control-label'
+						>Given Name</label>
+						<div class='cols-sm-10'>
+							<div class='input-group'>
+								<span class='input-group-addon'><i
+										class='fa fa-lock fa-lg'
+										aria-hidden='true'
+									></i></span>
+								<input
+									type='text'
+									class='form-control'
+									name='givenName'
+									id='givenName'
+									placeholder='Enter Given Name'
+								/>
+							</div>
+						</div>
+					</div>
+                    <div class='form-group'>
+						<label
+							for='gender'
+							class='cols-sm-2 control-label'
+						>Gender</label>
+						<div class='cols-sm-10'>
+							<div class='input-group'>
+								<span class='input-group-addon'><i
+										class='fa fa-lock fa-lg'
+										aria-hidden='true'
+									></i></span>
+								<input
+									type='text'
+									class='form-control'
+									name='gender'
+									id='gender'
+									placeholder='Enter Gender'
+								/>
+							</div>
+						</div>
+					</div>
+                    <div class='form-group'>
+						<label
+							for='dob'
+							class='cols-sm-2 control-label'
+						>Date Of Birth</label>
+						<div class='cols-sm-10'>
+							<div class='input-group'>
+								<span class='input-group-addon'><i
+										class='fa fa-calender'
+										aria-hidden='true'
+									></i></span>
+								<input
+									type='date'
+									class='form-control'
+									name='dob'
+									id='dob'
+									placeholder='Enter Date of Birth'
+								/>
+							</div>
+						</div>
+					</div>
+                    <div class='form-group'>
+						<label
+							for='age'
+							class='cols-sm-2 control-label'
+						>Age</label>
+						<div class='cols-sm-10'>
+							<div class='input-group'>
+								<span class='input-group-addon'><i
+										class='fa fa-lock fa-lg'
+										aria-hidden='true'
+									></i></span>
+								<input
+									type='text'
+									class='form-control'
+									name='age'
+									id='age'
+									placeholder='Enter Age'
+								/>
+							</div>
+						</div>
+					</div>
+                    <div class='form-group'>
+						<label
+							for='isTransportable'
+							class='cols-sm-2 control-label'
+						>Is Transportable</label>
+						<div class='cols-sm-10'>
+							<div class='form-check'>
+                                <input class='form-check-input' type='radio' name='isTransportable' id='isTransportable' value='Yes'>
+                                <label class='form-check-label' for='isTransportable'>Available</label>
+                            </div>
+                            <div class='form-check'>
+                                <input class='form-check-input' type='radio' name='isTransportable' id='isTransportable' value='No'>
+                                <label class='form-check-label' for='isTransportable'>Unavailable</label>
+                            </div>
+						</div>
+					</div>
+					<div class='form-group'>
+						<button
+							type='submit'
+							class='btn btn-primary btn-lg btn-block login-button'
+						>Add animal to Database</button>
+					</div>
+                    <div class='form-group'>
+						<button
+							type='reset'
+							class='btn btn-primary btn-lg btn-block login-button'
+						>Reset</button>
+					</div>
+					
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
